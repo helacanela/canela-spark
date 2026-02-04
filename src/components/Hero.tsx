@@ -46,7 +46,7 @@ export const Hero = () => {
               onClick={scrollToProcess}
               variant="outline" 
               size="lg"
-              className="border-light-gray/30 text-white hover:bg-white/10 font-display font-medium group"
+              className="border-white/40 text-white hover:bg-white/10 hover:border-white/60 font-display font-medium group"
             >
               Как работаем
               <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
