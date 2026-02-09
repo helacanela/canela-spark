@@ -3,6 +3,7 @@ import { AnimatedSection } from "./AnimatedSection";
 const navLinks = [
   { label: "Услуги", href: "#services" },
   { label: "Процесс", href: "#process" },
+  { label: "FAQ", href: "#faq" },
   { label: "Контакт", href: "#contact" },
 ];
 
@@ -10,33 +11,31 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-12 bg-background border-t border-border">
+    <footer className="py-14 bg-background border-t border-border/50">
       <div className="container">
         <AnimatedSection>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-2">
-              <span className="font-display text-xl font-bold text-foreground">
-                Canela Digital
-              </span>
-            </div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <a href="#" className="font-display text-xl font-bold">
+              <span className="text-foreground">Canela</span>
+              <span className="text-coral"> Digital</span>
+            </a>
             
-            <nav className="flex gap-6">
+            <nav className="flex flex-wrap justify-center gap-8">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-muted-foreground hover:text-coral transition-colors"
+                  className="text-sm text-muted-foreground hover:text-coral transition-colors duration-300"
                 >
                   {link.label}
                 </a>
               ))}
             </nav>
             
-            <div className="flex items-center gap-4">
-              {/* Social placeholders */}
+            <div className="flex items-center gap-3">
               <a 
                 href="#" 
-                className="w-9 h-9 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-coral hover:text-white transition-colors"
+                className="w-10 h-10 rounded-xl bg-muted flex items-center justify-center text-muted-foreground hover:bg-coral hover:text-white transition-all duration-300"
                 aria-label="Telegram"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -45,7 +44,7 @@ export const Footer = () => {
               </a>
               <a 
                 href="#" 
-                className="w-9 h-9 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-coral hover:text-white transition-colors"
+                className="w-10 h-10 rounded-xl bg-muted flex items-center justify-center text-muted-foreground hover:bg-coral hover:text-white transition-all duration-300"
                 aria-label="Instagram"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -55,9 +54,9 @@ export const Footer = () => {
             </div>
           </div>
           
-          <div className="mt-8 pt-6 border-t border-border text-center">
-            <p className="text-sm text-muted-foreground">
-              © {currentYear} Canela Digital. Маркетинг, который работает.
+          <div className="mt-10 pt-8 border-t border-border/50 text-center">
+            <p className="text-sm text-muted-foreground/60">
+              © {currentYear} Canela Digital
             </p>
           </div>
         </AnimatedSection>
