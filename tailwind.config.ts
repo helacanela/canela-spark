@@ -64,14 +64,11 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-        "2xl": "calc(var(--radius) * 1.5)",
-        "3xl": "calc(var(--radius) * 2)",
       },
       boxShadow: {
         card: "var(--shadow-card)",
         button: "var(--shadow-button)",
         lift: "var(--shadow-lift)",
-        glow: "var(--shadow-glow)",
       },
       keyframes: {
         "accordion-down": {
@@ -86,21 +83,11 @@ export default {
           from: { opacity: "0", transform: "translateY(12px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
-        "float": {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-20px)" },
-        },
-        "pulse-soft": {
-          "0%, 100%": { opacity: "0.4" },
-          "50%": { opacity: "0.6" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.5s ease-out forwards",
-        "float": "float 6s ease-in-out infinite",
-        "pulse-soft": "pulse-soft 4s ease-in-out infinite",
       },
     },
   },
