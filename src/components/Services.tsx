@@ -51,12 +51,12 @@ export const Services = () => {
           </p>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {services.map((service, index) => (
             <AnimatedSection key={service.title} delay={index * 0.05}>
-              <div className="group bg-card border border-border rounded-xl p-6 hover:border-raspberry/20 hover:shadow-elevated transition-all duration-300 h-full">
+              <div className="group bg-card border border-border rounded-xl p-5 md:p-6 hover:border-raspberry/20 hover:shadow-elevated transition-all duration-300 h-full">
                 <service.icon className="w-5 h-5 text-raspberry mb-4" strokeWidth={1.5} />
-                <h3 className="font-display text-lg font-bold text-foreground mb-2">
+                <h3 className="font-display text-base md:text-lg font-bold text-foreground mb-2">
                   {service.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">

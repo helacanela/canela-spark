@@ -40,12 +40,12 @@ export const PainPoints = () => {
           </p>
         </AnimatedSection>
 
-        <div className="max-w-3xl space-y-4">
+        <div className="max-w-3xl space-y-3 md:space-y-4">
           {painPoints.map((item, index) => (
             <AnimatedSection key={index} delay={index * 0.05}>
-              <div className="bg-card border border-border rounded-xl p-6 md:p-7">
-                <div className="flex flex-col md:flex-row md:items-start gap-3 md:gap-8">
-                  <p className="text-foreground font-display font-semibold md:w-2/5 md:flex-shrink-0">
+              <div className="bg-card border border-border rounded-xl p-5 md:p-7">
+                <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8">
+                  <p className="text-foreground font-display font-semibold text-sm md:text-base md:w-2/5 md:flex-shrink-0">
                     «{item.pain}»
                   </p>
                   <p className="text-muted-foreground text-sm leading-relaxed md:w-3/5">

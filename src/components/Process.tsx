@@ -5,25 +5,21 @@ const steps = [
     number: "01",
     title: "Разбираемся в задаче",
     description: "На бесплатной консультации обсуждаем ваш бизнес, текущий маркетинг и цели. Без обязательств.",
-    result: "Понимание ситуации и возможностей",
   },
   {
     number: "02",
     title: "Готовим фундамент",
     description: "Формируем стратегию, готовим посадочную страницу, тексты и креативы. Тестовые гипотезы.",
-    result: "Готовая база для запуска",
   },
   {
     number: "03",
     title: "Запускаем и тестируем",
     description: "Запускаем рекламу на контролируемом бюджете. Собираем данные, проверяем что работает.",
-    result: "Первые заявки и данные для оптимизации",
   },
   {
     number: "04",
     title: "Оптимизируем и масштабируем",
     description: "Усиливаем то, что работает. Отключаем то, что нет. Постепенно увеличиваем объём.",
-    result: "Стабильный поток обращений",
   },
 ];
 
@@ -58,14 +54,11 @@ export const Process = () => {
                 </div>
                 
                 <div className="pt-1">
-                  <h3 className="font-display text-xl font-bold text-foreground mb-2">
+                  <h3 className="font-display text-lg md:text-xl font-bold text-foreground mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-2 leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {step.description}
-                  </p>
-                  <p className="text-sm text-raspberry font-medium">
-                    → {step.result}
                   </p>
                 </div>
               </div>

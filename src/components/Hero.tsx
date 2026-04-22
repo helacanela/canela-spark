@@ -12,7 +12,6 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-[100svh] flex items-center bg-ink overflow-hidden">
-      {/* Subtle gradient wash */}
       <div className="absolute inset-0 bg-gradient-to-br from-ink via-deep-wine/30 to-ink" />
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-raspberry/5 to-transparent" />
       
@@ -24,24 +23,24 @@ export const Hero = () => {
           className="max-w-2xl"
         >
           <p className="text-raspberry font-display font-semibold text-sm md:text-base mb-6 tracking-wide uppercase">
-            Boutique Marketing Studio
+            Агентство диджитал маркетинга
           </p>
 
-          <h1 className="font-display text-[2.25rem] md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.1] mb-6">
+          <h1 className="font-display text-[2rem] sm:text-[2.25rem] md:text-5xl lg:text-[3.5rem] font-extrabold text-white leading-[1.1] mb-6">
             Выстраиваем маркетинг,{" "}
             <span className="text-gradient">который приводит клиентов</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-white/60 mb-10 max-w-xl leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-white/60 mb-10 max-w-xl leading-relaxed">
             Стратегия, реклама, сайт, аналитика — как единая система. 
             Для малого и среднего бизнеса, которому нужны заявки, а не отчёты.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12">
             <Button 
               onClick={scrollToContact}
               size="lg" 
-              className="bg-raspberry hover:bg-raspberry/90 text-white font-display font-semibold shadow-button hover:shadow-lift transition-all duration-300 hover:-translate-y-0.5 h-12 px-8"
+              className="bg-raspberry hover:bg-raspberry/90 text-white font-display font-semibold shadow-button hover:shadow-lift transition-all duration-300 hover:-translate-y-0.5 h-12 px-8 w-full sm:w-auto"
             >
               Обсудить задачу
             </Button>
@@ -50,9 +49,9 @@ export const Hero = () => {
               onClick={scrollToServices}
               variant="ghost" 
               size="lg"
-              className="text-white/60 hover:text-white hover:bg-white/5 font-display font-medium h-12"
+              className="text-white/60 hover:text-white hover:bg-white/5 font-display font-medium h-12 w-full sm:w-auto"
             >
-              Что мы делаем ↓
+              Что мы делаем
             </Button>
           </div>
 
