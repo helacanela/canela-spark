@@ -3,67 +3,68 @@ import { AnimatedSection } from "./AnimatedSection";
 const steps = [
   {
     number: "01",
-    title: "Старт и цели",
-    description: "Разбираем вашу ситуацию, продукт, аудиторию. Формулируем измеримые цели.",
-    result: "Ясность: что продвигаем, кому, зачем",
+    title: "Разбираемся в задаче",
+    description: "На бесплатной консультации обсуждаем ваш бизнес, текущий маркетинг и цели. Без обязательств.",
+    result: "Понимание ситуации и возможностей",
   },
   {
     number: "02",
-    title: "Подготовка и гипотезы",
-    description: "Готовим посадочную страницу, тексты, креативы. Формируем тестовые связки.",
+    title: "Готовим фундамент",
+    description: "Формируем стратегию, готовим посадочную страницу, тексты и креативы. Тестовые гипотезы.",
     result: "Готовая база для запуска",
   },
   {
     number: "03",
-    title: "Тест-запуск",
-    description: "Запускаем рекламу на небольшом бюджете. Проверяем гипотезы, собираем данные.",
-    result: "Первые заявки + понимание, что работает",
+    title: "Запускаем и тестируем",
+    description: "Запускаем рекламу на контролируемом бюджете. Собираем данные, проверяем что работает.",
+    result: "Первые заявки и данные для оптимизации",
   },
   {
     number: "04",
-    title: "Улучшение и рост",
-    description: "Отключаем слабое, усиливаем сильное. Масштабируем то, что приносит результат.",
-    result: "Стабильный поток заявок",
+    title: "Оптимизируем и масштабируем",
+    description: "Усиливаем то, что работает. Отключаем то, что нет. Постепенно увеличиваем объём.",
+    result: "Стабильный поток обращений",
   },
 ];
 
 export const Process = () => {
   return (
-    <section id="process" className="py-20 md:py-28 bg-background">
+    <section id="process" className="section-padding bg-background">
       <div className="container">
-        <AnimatedSection className="text-center mb-14">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Как работаем
+        <AnimatedSection className="mb-14">
+          <p className="text-raspberry font-display font-semibold text-sm mb-3 uppercase tracking-wide">
+            Процесс
+          </p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 max-w-lg">
+            Как мы работаем
           </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto">
-            Прозрачный процесс: от первого звонка до системного потока заявок
+          <p className="text-muted-foreground max-w-xl">
+            Простой и прозрачный процесс. Вы всегда знаете, что происходит и почему.
           </p>
         </AnimatedSection>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl">
           {steps.map((step, index) => (
-            <AnimatedSection key={step.number} delay={index * 0.1}>
-              <div className="relative pl-16 md:pl-20 pb-12 last:pb-0">
-                {/* Vertical line */}
+            <AnimatedSection key={step.number} delay={index * 0.08}>
+              <div className="relative pl-14 md:pl-20 pb-10 last:pb-0">
                 {index < steps.length - 1 && (
-                  <div className="absolute left-6 md:left-8 top-12 w-px h-[calc(100%-48px)] bg-border" />
+                  <div className="absolute left-[22px] md:left-[30px] top-10 w-px h-[calc(100%-40px)] bg-border" />
                 )}
                 
-                {/* Number badge */}
-                <div className="absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 rounded-full bg-navy flex items-center justify-center">
-                  <span className="font-display text-lg md:text-xl font-bold text-coral">
+                <div className="absolute left-0 top-0 w-11 h-11 md:w-[60px] md:h-[60px] rounded-full bg-ink flex items-center justify-center">
+                  <span className="font-display text-sm md:text-base font-bold text-raspberry">
                     {step.number}
                   </span>
                 </div>
                 
-                <div>
-                  <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2">
+                <div className="pt-1">
+                  <h3 className="font-display text-xl font-bold text-foreground mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground mb-3">
+                  <p className="text-muted-foreground text-sm mb-2 leading-relaxed">
                     {step.description}
                   </p>
-                  <p className="text-sm text-coral font-medium">
+                  <p className="text-sm text-raspberry font-medium">
                     → {step.result}
                   </p>
                 </div>

@@ -1,87 +1,67 @@
 import { AnimatedSection } from "./AnimatedSection";
-import { Target, Zap, Globe } from "lucide-react";
+import { BarChart3, Layout, Megaphone, PenTool, Search, Settings } from "lucide-react";
 
 const services = [
   {
-    icon: Target,
-    title: "Маркетинг-система",
-    description: "Стратегия продвижения и план действий на первые 90 дней.",
-    bullets: [
-      "Анализ аудитории и конкурентов",
-      "Воронка продаж под ваш бизнес",
-      "Приоритеты: что делать сначала",
-    ],
+    icon: Megaphone,
+    title: "Реклама и лидогенерация",
+    description: "Настраиваем платную рекламу, которая приносит заявки. Тестируем гипотезы, оптимизируем по стоимости лида, масштабируем рабочие связки.",
   },
   {
-    icon: Zap,
-    title: "Performance-продвижение",
-    description: "Платная реклама, которая приносит заявки, а не клики.",
-    bullets: [
-      "Настройка и тестирование гипотез",
-      "Оптимизация по стоимости заявки",
-      "Масштабирование рабочих связок",
-    ],
+    icon: Layout,
+    title: "Сайты и лендинги",
+    description: "Создаём и улучшаем посадочные страницы, которые конвертируют трафик в обращения. От быстрого лендинга до полноценного сайта.",
   },
   {
-    icon: Globe,
-    title: "Сайт и инфраструктура",
-    description: "От лендинга до сложных digital-систем — под задачу.",
-    bullets: [
-      "Быстрые посадочные страницы",
-      "Многостраничные сайты",
-      "Аналитика и отслеживание",
-    ],
+    icon: PenTool,
+    title: "Креативы и офферы",
+    description: "Разрабатываем рекламные тексты, визуалы и офферы, которые цепляют вашу аудиторию. Без шаблонов и клише.",
+  },
+  {
+    icon: Settings,
+    title: "Воронки и логика продаж",
+    description: "Выстраиваем путь клиента от первого касания до заявки. Убираем лишние шаги, усиливаем конверсию на каждом этапе.",
+  },
+  {
+    icon: Search,
+    title: "Маркетинг-аудит",
+    description: "Разбираем текущий маркетинг: что работает, что нет, где теряются деньги. Даём конкретные рекомендации.",
+  },
+  {
+    icon: BarChart3,
+    title: "Сопровождение бизнеса",
+    description: "Ежемесячная поддержка: ведение рекламы, отчётность, рекомендации по росту. Как внешний маркетинг-отдел.",
   },
 ];
 
 export const Services = () => {
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <section id="services" className="py-20 md:py-28 bg-muted/50">
+    <section id="services" className="section-padding bg-background">
       <div className="container">
-        <AnimatedSection className="text-center mb-14">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Что мы делаем
+        <AnimatedSection className="mb-14">
+          <p className="text-raspberry font-display font-semibold text-sm mb-3 uppercase tracking-wide">
+            Услуги
+          </p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 max-w-lg">
+            Всё, что нужно для системного привлечения клиентов
           </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto">
-            Три направления — одна цель: системный поток клиентов
+          <p className="text-muted-foreground max-w-xl">
+            Мы не делаем «просто рекламу» или «просто сайт». Мы связываем стратегию, 
+            рекламу, посадочные страницы и аналитику в одну работающую систему.
           </p>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, index) => (
-            <AnimatedSection key={service.title} delay={index * 0.1}>
-              <div className="bg-card rounded-xl p-6 md:p-8 shadow-card hover:shadow-lift transition-all duration-300 h-full flex flex-col">
-                <div className="w-12 h-12 rounded-lg bg-coral/10 flex items-center justify-center mb-5">
-                  <service.icon className="w-6 h-6 text-coral" />
-                </div>
-                
-                <h3 className="font-display text-xl font-bold text-foreground mb-3">
+            <AnimatedSection key={service.title} delay={index * 0.05}>
+              <div className="group bg-card border border-border rounded-xl p-6 hover:border-raspberry/20 hover:shadow-elevated transition-all duration-300 h-full">
+                <service.icon className="w-5 h-5 text-raspberry mb-4" strokeWidth={1.5} />
+                <h3 className="font-display text-lg font-bold text-foreground mb-2">
                   {service.title}
                 </h3>
-                
-                <p className="text-muted-foreground mb-5">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
-                
-                <ul className="space-y-2 mb-6 flex-grow">
-                  {service.bullets.map((bullet) => (
-                    <li key={bullet} className="flex items-start gap-2 text-sm text-foreground/80">
-                      <span className="w-1.5 h-1.5 rounded-full bg-coral mt-2 flex-shrink-0" />
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-                
-                <button 
-                  onClick={scrollToContact}
-                  className="text-coral font-display font-semibold text-sm hover:text-wine transition-colors self-start"
-                >
-                  Обсудить задачу →
-                </button>
               </div>
             </AnimatedSection>
           ))}
