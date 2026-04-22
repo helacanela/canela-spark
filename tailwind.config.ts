@@ -12,7 +12,7 @@ export default {
         sm: "640px",
         md: "768px",
         lg: "1024px",
-        xl: "1200px",
+        xl: "1120px",
       },
     },
     extend: {
@@ -26,11 +26,11 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        ink: "hsl(var(--ink))",
+        "deep-wine": "hsl(var(--deep-wine))",
+        raspberry: "hsl(var(--raspberry))",
         coral: "hsl(var(--coral))",
-        "light-gray": "hsl(var(--light-gray))",
-        wine: "hsl(var(--wine))",
-        plum: "hsl(var(--plum))",
-        navy: "hsl(var(--navy))",
+        "blue-accent": "hsl(var(--blue-accent))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -67,6 +67,7 @@ export default {
       },
       boxShadow: {
         card: "var(--shadow-card)",
+        elevated: "var(--shadow-elevated)",
         button: "var(--shadow-button)",
         lift: "var(--shadow-lift)",
       },
@@ -79,15 +80,10 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "fade-up": {
-          from: { opacity: "0", transform: "translateY(12px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-up": "fade-up 0.5s ease-out forwards",
       },
     },
   },

@@ -8,50 +8,57 @@ import {
 
 const faqs = [
   {
-    question: "Как начать работу?",
-    answer: "Запишитесь на бесплатную консультацию. На звонке разберём вашу ситуацию, цели и возможности. Если видим точки роста — предложим формат сотрудничества.",
+    question: "Вы работаете только с определёнными нишами?",
+    answer: "Мы специализируемся на малом и среднем бизнесе: образование, бьюти, общепит, услуги. Но подход применим шире — если ваш бизнес продаёт услуги или продукты онлайн, напишите нам, обсудим.",
   },
   {
-    question: "Нужен ли готовый сайт?",
-    answer: "Не обязательно. Если сайта нет — можем создать посадочную страницу под рекламу. Если есть — оценим его и дадим рекомендации по улучшению.",
+    question: "Мы уже запускаем рекламу — можете помочь?",
+    answer: "Да. Начнём с аудита: посмотрим текущие кампании, посадочные страницы и воронку. Дадим рекомендации и, если нужно, возьмём управление на себя.",
   },
   {
-    question: "Когда ждать первых результатов?",
-    answer: "Первые заявки обычно появляются в течение 2–3 недель после запуска рекламы. Стабильный поток — через 1–2 месяца оптимизации.",
+    question: "Вы делаете только стратегию или также реализуете?",
+    answer: "И то, и другое. Можем провести разовый аудит с рекомендациями, а можем взять проект целиком — от стратегии до ежедневного управления рекламой.",
   },
   {
-    question: "С какими бюджетами работаете?",
-    answer: "Минимальный рекламный бюджет для теста — от $500–1000/мес. Конкретные цифры зависят от ниши и географии. Обсудим на консультации.",
+    question: "Какой бюджет нужен для начала?",
+    answer: "Минимальный рекламный бюджет для теста — от $500–1000 в месяц, зависит от ниши и географии. На консультации подскажем, какой бюджет реалистичен для вашей задачи.",
+  },
+  {
+    question: "Как быстро можно начать?",
+    answer: "Обычно от первого разговора до запуска — 1–2 недели. Зависит от сложности задачи и готовности материалов.",
   },
   {
     question: "Что будет после консультации?",
-    answer: "Если решим работать — согласуем формат (разовый проект или ежемесячное сопровождение), подписываем договор, начинаем работу. Всё прозрачно.",
+    answer: "На консультации разберём вашу задачу и определим, можем ли мы быть полезны. Если да — предложим формат работы и следующие шаги. Если нет — честно скажем. Никакого давления.",
   },
 ];
 
 export const FAQ = () => {
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section id="faq" className="section-padding bg-muted/50">
       <div className="container">
-        <AnimatedSection className="text-center mb-12">
+        <AnimatedSection className="mb-10">
+          <p className="text-raspberry font-display font-semibold text-sm mb-3 uppercase tracking-wide">
+            Вопросы
+          </p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
             Частые вопросы
           </h2>
         </AnimatedSection>
 
         <AnimatedSection delay={0.1}>
-          <div className="max-w-2xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-3">
+          <div className="max-w-2xl">
+            <Accordion type="single" collapsible className="space-y-2">
               {faqs.map((faq, index) => (
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="bg-card rounded-xl px-6 shadow-card border-none"
+                  className="bg-card border border-border rounded-xl px-6 data-[state=open]:border-raspberry/20"
                 >
-                  <AccordionTrigger className="font-display font-semibold text-foreground hover:no-underline py-5 text-left">
+                  <AccordionTrigger className="font-display font-semibold text-foreground hover:no-underline py-5 text-left text-[15px]">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-5">
+                  <AccordionContent className="text-muted-foreground pb-5 text-sm leading-relaxed">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
