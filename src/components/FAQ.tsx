@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     question: "Какой бюджет нужен для начала?",
-    answer: "Минимальный рекламный бюджет для теста — от $500–1000 в месяц, зависит от ниши и географии. На консультации подскажем, какой бюджет реалистичен для вашей задачи.",
+    answer: "Минимальный рекламный бюджет для теста — от €200 в месяц, зависит от ниши и географии. На консультации подскажем, какой бюджет реалистичен для вашей задачи.",
   },
   {
     question: "Как быстро можно начать?",
@@ -53,12 +53,12 @@ export const FAQ = () => {
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="bg-card border border-border rounded-xl px-6 data-[state=open]:border-raspberry/20"
+                  className="bg-card border border-border rounded-xl px-5 md:px-6 data-[state=open]:border-raspberry/20"
                 >
-                  <AccordionTrigger className="font-display font-semibold text-foreground hover:no-underline py-5 text-left text-[15px]">
+                  <AccordionTrigger className="font-display font-semibold text-foreground hover:no-underline py-4 md:py-5 text-left text-sm md:text-[15px]">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-5 text-sm leading-relaxed">
+                  <AccordionContent className="text-muted-foreground pb-4 md:pb-5 text-sm leading-relaxed">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

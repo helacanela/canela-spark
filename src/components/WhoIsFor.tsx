@@ -2,16 +2,8 @@ import { AnimatedSection } from "./AnimatedSection";
 
 const audiences = [
   {
-    title: "Образование для взрослых",
-    examples: "Курсы, школы, наставники, коучи",
-  },
-  {
-    title: "Детское образование",
-    examples: "Языковые школы, творческие студии, развивающие центры",
-  },
-  {
-    title: "Театральные и творческие студии",
-    examples: "Театры, танцевальные школы, арт-пространства",
+    title: "Образование и творчество",
+    examples: "Курсы, языковые и детские школы, творческие студии, театральные школы, коучинг",
   },
   {
     title: "Бьюти и здоровье",
@@ -48,10 +40,10 @@ export const WhoIsFor = () => {
           </p>
         </AnimatedSection>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mb-10">
+        <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mb-10">
           {audiences.map((item, index) => (
             <AnimatedSection key={item.title} delay={index * 0.05}>
-              <div className="bg-card border border-border rounded-xl p-5">
+              <div className="bg-card border border-border rounded-xl p-5 h-full">
                 <h3 className="font-display font-bold text-foreground text-sm mb-1">
                   {item.title}
                 </h3>

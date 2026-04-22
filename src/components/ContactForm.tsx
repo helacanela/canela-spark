@@ -30,10 +30,10 @@ export const ContactForm = () => {
       <div className="container relative z-10">
         <div className="max-w-lg mx-auto">
           <AnimatedSection className="text-center mb-10">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
               Обсудим вашу задачу?
             </h2>
-            <p className="text-white/50">
+            <p className="text-white/50 text-sm sm:text-base">
               Бесплатная консультация — 30 минут. Разберём вашу ситуацию, 
               покажем точки роста. Без обязательств и давления.
             </p>
